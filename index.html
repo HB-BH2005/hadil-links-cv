@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hadil Barzani</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f8fbff;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:20px;
+            color:#1e293b;
+        }
+
+        .container{
+            width:100%;
+            max-width:700px;
+        }
+
+        .card{
+            background:white;
+            padding:45px;
+            border-radius:20px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .top{
+            display:flex;
+            justify-content:flex-end;
+            margin-bottom:25px;
+        }
+
+        button{
+            background:#2563eb;
+            color:white;
+            border:none;
+            padding:10px 18px;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:14px;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#1d4ed8;
+        }
+
+        h1{
+            text-align:center;
+            color:#2563eb;
+            font-size:38px;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            font-size:18px;
+            color:#475569;
+            margin-bottom:30px;
+            line-height:1.6;
+        }
+
+        .intro{
+            text-align:center;
+            font-size:17px;
+            line-height:1.8;
+            margin-bottom:35px;
+        }
+
+        .links{
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+        }
+
+        .link-card{
+            background:#2563eb;
+            color:white;
+            text-decoration:none;
+            padding:18px;
+            border-radius:14px;
+            display:flex;
+            align-items:center;
+            gap:15px;
+            font-size:17px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .link-card:hover{
+            background:#1d4ed8;
+            transform:translateY(-2px);
+        }
+
+        .link-card i{
+            font-size:26px;
+        }
+
+        .footer{
+            text-align:center;
+            margin-top:30px;
+            color:#64748b;
+            font-size:14px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="top">
+            <button onclick="changeLanguage()">
+                FR / EN
+            </button>
+        </div>
+
+        <h1>Hadil Barzani</h1>
+
+        <p class="subtitle" id="subtitle">
+            2nd Year Knowledge Engineering and Data Science Student at the School of Information Sciences | Seeking PFA Internship
+        </p>
+
+        <p class="intro" id="intro">
+            I am a passionate student interested in machine learning,
+            data analysis, and software development.
+            Curious and motivated, I enjoy learning new technologies
+            and taking on challenging projects.
+            Currently seeking a PFA internship opportunity.
+        </p>
+
+        <div class="links">
+
+            <a class="link-card"
+               href="https://www.linkedin.com/in/hadil-barzani-428983331?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+               target="_blank">
+
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn : Hadil BARZANI
+
+            </a>
+
+            <a class="link-card"
+               href="https://github.com/HB-BH2005"
+               target="_blank">
+
+                <i class="fa-brands fa-github"></i>
+                GitHub : HB-BH2005
+
+            </a>
+
+        </div>
+
+        <div class="footer">
+            © 2026 Hadil Barzani
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    let english = true;
+
+    function changeLanguage(){
+
+        const subtitle = document.getElementById("subtitle");
+        const intro = document.getElementById("intro");
+
+        if(english){
+
+            subtitle.innerHTML =
+                "Étudiante en 2ème année d’Ingénierie des Connaissances et Science des Données à l’École des Sciences de l’Information | Recherche de stage PFA";
+
+            intro.innerHTML = `
+                Je suis une étudiante passionnée par le machine learning,
+                l’analyse de données et le développement logiciel.
+                Curieuse et motivée, j’aime découvrir de nouvelles technologies
+                et relever de nouveaux défis.
+                Actuellement à la recherche d’un stage PFA.
+            `;
+
+            english = false;
+
+        }else{
+
+            subtitle.innerHTML =
+                "2nd Year Knowledge Engineering and Data Science Student at the School of Information Sciences | Seeking PFA Internship";
+
+            intro.innerHTML = `
+                I am a passionate student interested in machine learning,
+                data analysis, and software development.
+                Curious and motivated, I enjoy learning new technologies
+                and taking on challenging projects.
+                Currently seeking a PFA internship opportunity.
+            `;
+
+            english = true;
+        }
+    }
+
+</script>
+
+</body>
+</html>
